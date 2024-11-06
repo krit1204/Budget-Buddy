@@ -22,9 +22,9 @@ app.use(cors());
 
 // Routes
 // User routes
-app.use("${process.env.REACT_APP_API_URL}/api/v1/users", require("./routes/userRoute"));
+app.use("/api/v1/users", require("./routes/userRoute"));
 // Transactions routes
-app.use("${process.env.REACT_APP_API_URL}/api/v1/transactions", require("./routes/transactionRoutes"));
+app.use("/api/v1/transactions", require("./routes/transactionRoutes"));
 
 //read static files
 app.use(express.static(path.join(__dirname, "./client/build")));
